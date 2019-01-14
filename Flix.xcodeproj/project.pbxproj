@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		535DEEF521ED50CC00DED090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEEF421ED50CC00DED090 /* AppDelegate.swift */; };
-		535DEEF721ED50CC00DED090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEEF621ED50CC00DED090 /* ViewController.swift */; };
 		535DEEFA21ED50CC00DED090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535DEEF821ED50CC00DED090 /* Main.storyboard */; };
 		535DEEFC21ED50D000DED090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 535DEEFB21ED50D000DED090 /* Assets.xcassets */; };
 		535DEEFF21ED50D000DED090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535DEEFD21ED50D000DED090 /* LaunchScreen.storyboard */; };
 		535DEF0A21ED50D000DED090 /* FlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEF0921ED50D000DED090 /* FlixTests.swift */; };
 		535DEF1521ED50D000DED090 /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEF1421ED50D000DED090 /* FlixUITests.swift */; };
+		535DEF2321ED53AA00DED090 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEF2221ED53AA00DED090 /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		535DEEF121ED50CC00DED090 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		535DEEF421ED50CC00DED090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		535DEEF621ED50CC00DED090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		535DEEF921ED50CC00DED090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		535DEEFB21ED50D000DED090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		535DEEFE21ED50D000DED090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		535DEF1021ED50D000DED090 /* FlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		535DEF1421ED50D000DED090 /* FlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITests.swift; sourceTree = "<group>"; };
 		535DEF1621ED50D100DED090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		535DEF2221ED53AA00DED090 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				535DEEF421ED50CC00DED090 /* AppDelegate.swift */,
-				535DEEF621ED50CC00DED090 /* ViewController.swift */,
 				535DEEF821ED50CC00DED090 /* Main.storyboard */,
+				535DEF2221ED53AA00DED090 /* MoviesViewController.swift */,
 				535DEEFB21ED50D000DED090 /* Assets.xcassets */,
 				535DEEFD21ED50D000DED090 /* LaunchScreen.storyboard */,
 				535DEF0021ED50D000DED090 /* Info.plist */,
@@ -256,8 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				535DEEF721ED50CC00DED090 /* ViewController.swift in Sources */,
 				535DEEF521ED50CC00DED090 /* AppDelegate.swift in Sources */,
+				535DEF2321ED53AA00DED090 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
