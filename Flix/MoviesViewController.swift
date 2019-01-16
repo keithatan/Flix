@@ -9,6 +9,8 @@
 import UIKit
 
 class MoviesViewController: UIViewController {
+    
+    var movieResponse = [[String:Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,10 @@ class MoviesViewController: UIViewController {
                 print(error.localizedDescription)
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                
+                self.movieResponse = dataDictionary["results"] as! [[String:Any]]
+                
+                print(self.movieResponse)
                 
                 // TODO: Get the array of movies
                 // TODO: Store the movies in a property to use elsewhere

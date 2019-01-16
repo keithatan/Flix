@@ -14,6 +14,7 @@
 		535DEF0A21ED50D000DED090 /* FlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEF0921ED50D000DED090 /* FlixTests.swift */; };
 		535DEF1521ED50D000DED090 /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEF1421ED50D000DED090 /* FlixUITests.swift */; };
 		535DEF2321ED53AA00DED090 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEF2221ED53AA00DED090 /* MoviesViewController.swift */; };
+		535DEF2521ED5D0000DED090 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DEF2421ED5D0000DED090 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		535DEF1421ED50D000DED090 /* FlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITests.swift; sourceTree = "<group>"; };
 		535DEF1621ED50D100DED090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		535DEF2221ED53AA00DED090 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		535DEF2421ED5D0000DED090 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				535DEEF421ED50CC00DED090 /* AppDelegate.swift */,
 				535DEEF821ED50CC00DED090 /* Main.storyboard */,
 				535DEF2221ED53AA00DED090 /* MoviesViewController.swift */,
+				535DEF2421ED5D0000DED090 /* Movie.swift */,
 				535DEEFB21ED50D000DED090 /* Assets.xcassets */,
 				535DEEFD21ED50D000DED090 /* LaunchScreen.storyboard */,
 				535DEF0021ED50D000DED090 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				535DEEF521ED50CC00DED090 /* AppDelegate.swift in Sources */,
 				535DEF2321ED53AA00DED090 /* MoviesViewController.swift in Sources */,
+				535DEF2521ED5D0000DED090 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
