@@ -62,12 +62,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
+    
         
         let movie = movieResponse[indexPath.row]
         let title = movie["title"] as! String
+        let rating = movie["vote_average"] as! Double
         
-        cell.textLabel?.text = title
+        cell.titleLabel.text = title
+        cell.ratingLabel.text = "Score: \(rating)/10"
         
         return cell
     }
