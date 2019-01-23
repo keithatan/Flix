@@ -13,7 +13,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     var movieResponse = [[String:Any]]()
-
+    var movies = [Movie]()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -32,11 +32,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             if let error = error {
                 print(error.localizedDescription)
             } else if let data = data {
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
                 
                 self.movieResponse = dataDictionary["results"] as! [[String:Any]]
+            
+                /*Need to look over this code if I want to use movie objects*/
                 
-                print(self.movieResponse)
+                /*
+                for i in 0..<self.movieResponse.count{
+                    self.movies[i] = Movie(vote_count: movieResponse["vote_count"] as? Int, id:movieResponse["id"] as? Int, video:movieResponse["video"] as? Bool, vote_average:movieResponse["vote_average"] as? Double, title:movieResponse["title"] as! String, popularity:movieResponse["popularity"] as? Double, poster_path:movieResponse["poster_path"] as! String, original_language:movieResponse["original_language"] as! String, original_title:movieResponse["original_title"] as! String, genre_ids: <#[Int]#>, backdrop_path:movieResponse["backdrop_path"] as! String, adult:movieResponse["adult"] as? Bool, overview:movieResponse["overview"] as! String, release_date:movieResponse["release_date"] as! String);
+                }
+                */
+ 
+                
+                self.tableView.reloadData();
                 
                 // TODO: Get the array of movies
                 // TODO: Store the movies in a property to use elsewhere
@@ -49,13 +58,16 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return movieResponse.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        cell.textLabel?.text = "row: \(indexPath.row)"
+        let movie = movieResponse[indexPath.row]
+        let title = movie["title"] as! String
+        
+        cell.textLabel?.text = title
         
         return cell
     }
