@@ -108,6 +108,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // Bundle the movie information to the next screen
         
         movieDetailViewController.movie = movie;
+        
+        // Deselect while traveling to the next screen
+        
+        tableView.deselectRow(at: indexPath, animated: true)
 
     }
     
