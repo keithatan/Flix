@@ -64,8 +64,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let movie = movies[indexPath.row]
         
         let title = movie["title"] as! String
+        let release = movie["release_date"] as! String
+        let endOfYear = release.index(of: "-")!
+        let year = release[..<endOfYear]
         
-        cell.titleLabel.text = title
+        cell.titleLabel.text = "\(title) (\(year))"
         
         return cell
     }
