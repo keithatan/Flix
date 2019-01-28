@@ -17,7 +17,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [X] When a selected search result is selected, the user is directed to the detailed screen of the movie
 
 ### App Walkthough GIF
-<img src='https://github.com/keithatan/Flix/blob/master/FlixPart2GIF.gif?raw=true' title='Flix Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/keithatan/Flix/blob/master/FlixPart2.2GIF.gif?raw=true' title='Flix Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Notes
 * Figuring out how to close the keyboard on tap doesn't work the way I usually do it due to more elements on screen
