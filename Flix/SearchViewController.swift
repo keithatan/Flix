@@ -83,5 +83,31 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        // Identify selected movie cell
+        let cell = sender as! UITableViewCell
+        
+        // Gets the index of that cell because the tableview knows the index for a cell
+        let indexPath = searchTable.indexPath(for: cell)!
+        
+        let movie = movies[indexPath.row]
+        
+        // Identify the destination
+        // Must cast because the destination is a generic VC
+        let movieDetailViewController = segue.destination as! MovieDetailsViewController
+        
+        // Bundle the movie information to the next screen
+        
+        movieDetailViewController.movie = movie;
+        
+        // Deselect while traveling to the next screen
+        
+        searchTable.deselectRow(at: indexPath, animated: true)
+        
+    }
 
 }

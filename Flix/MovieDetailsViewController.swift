@@ -28,6 +28,8 @@ class MovieDetailsViewController: UIViewController {
  
         
         titleLabel.text = movie["title"] as? String
+        titleLabel.textAlignment = .center
+
         synopsisLabel.text = movie["overview"] as? String
         ratingLabel.text = "Score: \(rating)/10"
 
