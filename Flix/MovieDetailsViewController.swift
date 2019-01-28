@@ -18,11 +18,24 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var releaseYearLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let rating = movie["vote_average"] as! Double
+
+ 
+        
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["overview"] as? String
+        ratingLabel.text = "Score: \(rating)/10"
+
+        let release = movie["release_date"] as! String
+        let endOfYear = release.index(of: "-")!
+        let year = release[..<endOfYear]
+        
+        releaseYearLabel.text = "(\(year))"
         
         titleLabel.sizeToFit()
         synopsisLabel.sizeToFit()
@@ -36,6 +49,11 @@ class MovieDetailsViewController: UIViewController {
         let backdropPath = movie["backdrop_path"] as! String
         let backdropURL = URL(string: higherResURL + backdropPath)
         backdropView.af_setImage(withURL: backdropURL!)
+        
+        let  gradientLayer   = CAGradientLayer()
+        gradientLayer.frame  =  self.backdropView.bounds
+        gradientLayer.colors = [UIColor.clear.cgColor,UIColor.black.cgColor]
+        self.backdropView.layer.addSublayer(gradientLayer)
         
 
     }
